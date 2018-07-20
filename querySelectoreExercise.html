@@ -1,0 +1,42 @@
+<html>
+	<head>
+		
+	</head>
+<body>
+		<h1  class="title"></h1>
+		<div class="lyric lyric--one"></div>
+		<div class="lyric lyric--two"></div>
+		<div class="lyric lyric--three"></div>
+		<div class="lyric lyric--four"></div>
+
+		<script>
+			    /* 
+				Below we have an array of song lyrics. Each item in the array represents a line in the song.
+
+				Goal: Learn to use the .querySelector() and .querySelectorAll methods
+
+				Task: Using querySelector, insert the song title into the corresponding element. Using querySelectorAll, insert each lyric line into its corresponding element.
+
+				For reference: 
+				https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+				https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+				*/
+				const songTitle = `"All Star" by Smashmouth`;
+				const lyrics = [
+				  `Hey now, you're an all-star, get your game on, go play`,
+				  `Hey now, you're a rock star, get the show on, get paid`,
+				  `And all that glitters is gold`,
+				  `Only shooting stars break the mold`
+				];
+				const titleEl = document.querySelector('.title'); // 1. Select the title dom element here
+				const lyricEls = document.querySelectorAll('.lyric'); // 2. Select all of the lyric dom elements here
+				// 3. Insert the song title into the title element here
+				titleEl.innerHTML = songTitle;
+				// 4. Loop through each element and insert its corresponding lyric here
+				for(var i = 0; i < lyricEls.length; i++){
+				    lyricEls[i].innerHTML = lyrics[i];
+				}
+	
+		</script>
+</body>
+</html>
